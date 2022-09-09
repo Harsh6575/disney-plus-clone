@@ -1,0 +1,5 @@
+npx create-react-app disney-plus-clone --template redux
+
+npm i styled-components
+npm install react-slick --save
+npm install slick-carousel

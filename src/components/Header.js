@@ -44,6 +44,7 @@ background: linear-gradient(to bottom, #141b29, #0c111b 300px);
 display: flex;
 align-items: center;
 padding: 0 36px;
+overflow-x: hidden;
 `;
 
 const Logo = styled.img`
