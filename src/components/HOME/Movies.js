@@ -39,7 +39,10 @@ const Movies = () => {
 
 export default Movies;
 
-const Container = styled.div``;
+const Container = styled.div`
+overflow: hiiden;
+margin-bottom: 30px;
+`;
 
 const Content = styled.div`
 display: grid;
