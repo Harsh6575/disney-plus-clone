@@ -4,3 +4,5 @@ npm i styled-components
 npm install react-slick --save
 npm install slick-carousel
 npm install react-router-dom
+npm i firebase
+npm i firebase-tools
