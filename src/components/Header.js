@@ -1,58 +1,60 @@
-import React, { useEffect } from 'react';
+import React
+    // ,{ useEffect } 
+    from 'react';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import { findRenderedComponentWithType } from 'react-dom/test-utils';
-import { selectUserName, selectUserPhoto, setUserLogin, setSignOut } from '../features/user/userSlice';
-import { useSelector, useDispatch } from 'react-redux';
-import { auth, provider } from '../firebase';
-import { useNavigate } from 'react-router-dom';
+// import { findRenderedComponentWithType } from 'react-dom/test-utils';
+// import { selectUserName, selectUserPhoto, setUserLogin, setSignOut } from '../features/user/userSlice';
+// import { useSelector, useDispatch } from 'react-redux';
+// import { auth, provider } from '../firebase';
+// import { useNavigate } from 'react-router-dom';
 
 const Header = () => {
 
-    const userName = useSelector(selectUserName);
-    const userPhoto = useSelector(selectUserPhoto);
+    // const userName = useSelector(selectUserName);
+    // const userPhoto = useSelector(selectUserPhoto);
 
-    const dispatch = useDispatch();
-    const navigate = useNavigate();
+    // const dispatch = useDispatch();
+    // const navigate = useNavigate();
 
-    useEffect(() => {
-        auth.onAuthStateChanged(async (user) => {
-            if (user) {
-                dispatch(setUserLogin({
-                    name: user.displayName,
-                    email: user.email,
-                    photo: user.photoURL
-                }));
-                navigate('/');
-            }
-        })
-    }, []);
+    // useEffect(() => {
+    //     auth.onAuthStateChanged(async (user) => {
+    //         if (user) {
+    //             dispatch(setUserLogin({
+    //                 name: user.displayName,
+    //                 email: user.email,
+    //                 photo: user.photoURL
+    //             }));
+    //             navigate('/');
+    //         }
+    //     })
+    // }, []);
 
-    const signIn = () => {
-        auth.signInWithPopup(provider)
-            .then((result) => {
-                let user = result.user;
-                dispatch(setUserLogin({
-                    name: user.displayName,
-                    email: user.email,
-                    photo: user.photoURL,
-                }));
-                navigate('/');
-            })
-    };
+    // const signIn = () => {
+    //     auth.signInWithPopup(provider)
+    //         .then((result) => {
+    //             let user = result.user;
+    //             dispatch(setUserLogin({
+    //                 name: user.displayName,
+    //                 email: user.email,
+    //                 photo: user.photoURL,
+    //             }));
+    //             navigate('/');
+    //         })
+    // };
 
-    const signOut = () => {
-        auth.signOut()
-            .then(() => {
-                dispatch(setSignOut());
-                navigate('/login');
-            })
-    };
+    // const signOut = () => {
+    //     auth.signOut()
+    //         .then(() => {
+    //             dispatch(setSignOut());
+    //             navigate('/login');
+    //         })
+    // };
 
     return (
         <Nav>
             <Logo src="/images/logo.svg" alt='logos' />
-            {
-                !userName ? (
+            {/* {!userName ? (
                     <LoginContainer>
                         <Login onClick={signIn}>
                             LOGIN
@@ -91,7 +93,36 @@ const Header = () => {
                             src={userPhoto} alt='logos' />
                     </>
                 )
-            }
+            } */}
+            <NavMenu>
+                <a href='/'>
+                    <img src="/images/home-icon.svg" alt='logos' />
+                    <span>HOME</span>
+                </a>
+                <a href='/'>
+                    <img src="/images/search-icon.svg" alt='logos' />
+                    <span>SEARCH</span>
+                </a>
+                <a href='/'>
+                    <img src="/images/watchlist-icon.svg" alt='logos' />
+                    <span>WATCHLIST</span>
+                </a>
+                <a href='/'>
+                    <img src="/images/original-icon.svg" alt='logos' />
+                    <span>ORIGINALS</span>
+                </a>
+                <a href='/'>
+                    <img src="/images/movie-icon.svg" alt='logos' />
+                    <span>MOVIES</span>
+                </a>
+                <a href='/'>
+                    <img src="/images/series-icon.svg" alt='logos' />
+                    <span>SERIES</span>
+                </a>
+            </NavMenu>
+            <Link to='/login'>
+                <UserImg src="/logo192.png" alt='logos' />
+            </Link>
         </Nav>
     );
 };
@@ -164,26 +195,26 @@ border-radius: 50%;
 cursor: pointer;
 `;
 
-const Login = styled.div`   
-border: 1px solid #f9f9f9;
-padding: 8px 16px;
-border-radius: 4px;
-letter-spacing: 1.5px;
-text-transform: uppercase;
-background-color: rgba(0,0,0,0.6);
-transition: all 0.2s ease 0s;
-cursor: pointer;
+// const Login = styled.div`
+// border: 1px solid #f9f9f9;
+// padding: 8px 16px;
+// border-radius: 4px;
+// letter-spacing: 1.5px;
+// text-transform: uppercase;
+// background-color: rgba(0,0,0,0.6);
+// transition: all 0.2s ease 0s;
+// cursor: pointer;
 
-&:hover{
-    background-color: #f9f9f9;
-    color: #000;
-    border-color: transparent;
-}
+// &:hover{
+//     background-color: #f9f9f9;
+//     color: #000;
+//     border-color: transparent;
+// }
 
-`;
+// `;
 
-const LoginContainer = styled.div`
-flex: 1;
-display: flex;
-justify-content: flex-end;
-`;
+// const LoginContainer = styled.div`
+// flex: 1;
+// display: flex;
+// justify-content: flex-end;
+// `;

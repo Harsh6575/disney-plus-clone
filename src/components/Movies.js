@@ -1,12 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
-import { selectMovies } from '../features/movie/movieSlice';
-import { useSelector } from 'react-redux';
+// import { selectMovies } from '../features/movie/movieSlice';
+// import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 
 const Movies = () => {
 
-    const movies = useSelector(selectMovies);
+    // const movies = useSelector(selectMovies);
 
     return (
         <Container>
@@ -14,13 +14,53 @@ const Movies = () => {
                 Recommended for You
             </h4>
             <Content>
-                {movies && movies.map((movie) => (
+                {/* {movies && movies.map((movie) => (
                     <Wrap key={movie.id}>
                         <Link to={`/detail/${movie.id}`}>
                             <img src={movie.cardImg} alt={movie.title} />
                         </Link>
                     </Wrap>
-                ))}
+                ))} */}
+                <Wrap>
+                    <Link to={`/detail`}>
+                        <img src="/images/slider-scale.jpg" alt="" />
+                    </Link>
+                </Wrap>
+                <Wrap>
+                    <Link to={`/detail`}>
+                        <img src="/images/slider-scales.jpg" alt="" />
+                    </Link>
+                </Wrap>
+                <Wrap>
+                    <Link to={`/detail`}>
+                        <img src="/images/slider-badag.jpg" alt="" />
+                    </Link>
+                </Wrap>
+                <Wrap>
+                    <Link to={`/detail`}>
+                        <img src="/images/slider-badging.jpg" alt="" />
+                    </Link>
+                </Wrap>
+                <Wrap>
+                    <Link to={`/detail`}>
+                        <img src="/images/slider-scale.jpg" alt="" />
+                    </Link>
+                </Wrap>
+                <Wrap>
+                    <Link to={`/detail`}>
+                        <img src="/images/slider-scales.jpg" alt="" />
+                    </Link>
+                </Wrap>
+                <Wrap>
+                    <Link to={`/detail`}>
+                        <img src="/images/slider-badag.jpg" alt="" />
+                    </Link>
+                </Wrap>
+                <Wrap>
+                    <Link to={`/detail`}>
+                        <img src="/images/slider-badging.jpg" alt="" />
+                    </Link>
+                </Wrap>
             </Content>
         </Container>
     );

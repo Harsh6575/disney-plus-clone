@@ -6,18 +6,36 @@ const Viewers = () => {
     <Container>
       <Wrap>
         <img src="/images/viewers-disney.png" alt="" />
+        <video autoPlay={true} loop={true} playsInline={true}>
+          <source src="/videos/1564674844-disney.mp4" type="video/mp4" />
+        </video>
       </Wrap>
       <Wrap>
         <img src="/images/viewers-pixar.png" alt="" />
+        <video autoPlay={true} loop={true} playsInline={true}>
+          <source src="/videos/1564676714-pixar.mp4" type="video/mp4" />
+        </video> 
       </Wrap>
       <Wrap>
         <img src="/images/viewers-marvel.png" alt="" />
+        <video autoPlay={true} loop={true} playsInline={true}>
+          <source src="/videos/1564676115-marvel.mp4" type="video/mp4" />
+        </video>
       </Wrap>
       <Wrap>
         <img src="/images/viewers-starwars.png" alt="" />
+        <video autoPlay={true} loop={true} playsInline={true}>
+          <source src="/videos/1608229455-star-wars.mp4" type="video/mp4" />
+        </video>
       </Wrap>
       <Wrap>
         <img src="/images/viewers-national.png" alt="" />
+        <video autoPlay={true} loop={true} playsInline={true}>
+          <source
+            src="/videos/1564676296-national-geographic.mp4"
+            type="video/mp4"
+          />
+        </video>
       </Wrap>
     </Container>
   );
@@ -45,9 +63,24 @@ img{
     height: 100%;
     object-fit: cover;
 }
+
+video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 0;
+}
+
 &:hover{
     border: 3px solid rgba(249, 249, 249, 0.8);
     box-shadow: rgb(0 0 0 / 80%) 0px 40px 58px -16px, rgb(0 0 0 / 72%) 0px 30px 22px -10px;
     transform: scale(1.05);
+    video {
+      opacity: 1;
+    }
 }
 `;
