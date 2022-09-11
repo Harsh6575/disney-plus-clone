@@ -9,6 +9,7 @@ import "slick-carousel/slick/slick-theme.css";
 const ImgSlider = () => {
 
     let settings = {
+        // dots: true,
         infinite: true,
         speed: 500,
         slidesToShow: 1,

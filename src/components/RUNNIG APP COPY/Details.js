@@ -1,10 +1,61 @@
-import React from 'react';
+import React
+// , { useEffect, useState } 
+from 'react';
 import styled from 'styled-components';
+// import { useParams } from 'react-router-dom';
+// import db from '../firebase';
 
 const Detail = () => {
+//   const { id } = useParams();
+
+//   const [movie, setMovie] = useState();
+
+//   useEffect(() => {
+//     db.collection("movies").doc(id).get().then((doc) => {
+//       if (doc.exists) {
+//         //save the movie data
+//         setMovie(doc.data());
+//       } else {
+//         //redirect to home
+//       }
+//     });
+//   }, [id]);
 
   return (
     <Container>
+      {/* {movie && (
+        <>
+
+          <BackGround>
+            <img src={movie.backgroundImg} alt="" />
+          </BackGround>
+          <ImageTitle>
+            <img src={movie.titleImg} alt="" />
+          </ImageTitle>
+          <Controls>
+            <PlayButton>
+              <img src="/images/play-icon-black.png" alt="" />
+              <span>PLAY</span>
+            </PlayButton>
+            <TrailerButton>
+              <img src="/images/play-icon-white.png" alt="" />
+              <span>TRAILER</span>
+            </TrailerButton>
+            <AddButton>
+              <span>+</span>
+            </AddButton>
+            <GroupWatchButton>
+              <img src='/images/group-icon.png' alt="" />
+            </GroupWatchButton>
+          </Controls>
+          <SubTitle>
+            {movie.subTitle}
+          </SubTitle>
+          <Description>
+            {movie.description}
+          </Description>
+        </>
+      )} */}
       <BackGround>
         <img src="https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/4F39B7E16726ECF419DD7C49E011DD95099AA20A962B0B10AA1881A70661CE45/scale?width=1440&aspectRatio=1.78&format=jpeg" alt="" />
       </BackGround>
