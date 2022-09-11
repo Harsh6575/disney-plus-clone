@@ -3,16 +3,7 @@ import 'firebase/compat/auth';
 import 'firebase/compat/firestore';
 import "firebase/compat/storage"
 import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
-// const firebaseConfig = {
-//   apiKey: "AIzaSyA9BnlX96fMf7XiUVCFRsoQzG8DGERJkeY",
-//   authDomain: "disneyplus-clone-a33d5.firebaseapp.com",
-//   projectId: "disneyplus-clone-a33d5",
-//   storageBucket: "disneyplus-clone-a33d5.appspot.com",
-//   messagingSenderId: "37918794208",
-//   appId: "1:37918794208:web:dbe9842dfe1dda522a4b85",
-//   measurementId: "G-DRVLJKWRWG",
-// };
+
 const firebaseConfig = {
   apiKey: "AIzaSyA-2aQ6P4JcEm3uh6JXRQ_CsMHETx6u-so",
   authDomain: "disney-plus-clone-by-harsh.firebaseapp.com",
@@ -23,12 +14,9 @@ const firebaseConfig = {
   measurementId: "G-SVCY9SPB0M"
 };
 
-const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
-
-const db = app.firestore();
+const firebaseApp = firebase.initializeApp(firebaseConfig);
+const db = firebaseApp.firestore();
 const auth = firebase.auth();
-
 const provider = new firebase.auth.GoogleAuthProvider();
 const storage = firebase.storage();
 

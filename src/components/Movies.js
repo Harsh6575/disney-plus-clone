@@ -23,42 +23,42 @@ const Movies = () => {
                 ))} */}
                 <Wrap>
                     <Link to={`/detail`}>
-                        <img src="/images/slider-scale.jpg" alt="" />
+                        <img src="https://img1.hotstarext.com/image/upload/f_auto,t_web_vl_3x/sources/r1/cms/prod/9317/1269317-v-c851767a526b" alt="" />
                     </Link>
                 </Wrap>
                 <Wrap>
                     <Link to={`/detail`}>
-                        <img src="/images/slider-scales.jpg" alt="" />
+                        <img src="https://img1.hotstarext.com/image/upload/f_auto,t_web_vl_1_5x/sources/r1/cms/prod/1518/1161518-v-8d86a7ed8500" alt="" />
                     </Link>
                 </Wrap>
                 <Wrap>
                     <Link to={`/detail`}>
-                        <img src="/images/slider-badag.jpg" alt="" />
+                        <img src="https://img1.hotstarext.com/image/upload/f_auto,t_web_vl_3x/sources/r1/cms/prod/1691/1011691-v-657881703c09" alt="" />
                     </Link>
                 </Wrap>
                 <Wrap>
                     <Link to={`/detail`}>
-                        <img src="/images/slider-badging.jpg" alt="" />
+                        <img src="https://img1.hotstarext.com/image/upload/f_auto,t_web_vl_3x/sources/r1/cms/prod/6365/936365-v" alt="" />
                     </Link>
                 </Wrap>
                 <Wrap>
                     <Link to={`/detail`}>
-                        <img src="/images/slider-scale.jpg" alt="" />
+                        <img src="https://img1.hotstarext.com/image/upload/f_auto,t_web_vl_3x/sources/r1/cms/prod/9317/1269317-v-c851767a526b" alt="" />
                     </Link>
                 </Wrap>
                 <Wrap>
                     <Link to={`/detail`}>
-                        <img src="/images/slider-scales.jpg" alt="" />
+                        <img src="https://img1.hotstarext.com/image/upload/f_auto,t_web_vl_1_5x/sources/r1/cms/prod/1518/1161518-v-8d86a7ed8500" alt="" />
                     </Link>
                 </Wrap>
                 <Wrap>
                     <Link to={`/detail`}>
-                        <img src="/images/slider-badag.jpg" alt="" />
+                        <img src="https://img1.hotstarext.com/image/upload/f_auto,t_web_vl_3x/sources/r1/cms/prod/1691/1011691-v-657881703c09" alt="" />
                     </Link>
                 </Wrap>
                 <Wrap>
                     <Link to={`/detail`}>
-                        <img src="/images/slider-badging.jpg" alt="" />
+                        <img src="https://img1.hotstarext.com/image/upload/f_auto,t_web_vl_3x/sources/r1/cms/prod/6365/936365-v" alt="" />
                     </Link>
                 </Wrap>
             </Content>
