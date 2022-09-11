@@ -73,6 +73,7 @@ video {
     left: 0;
     z-index: -1;
     opacity: 0;
+    border-radius: 7px;
 }
 
 &:hover{

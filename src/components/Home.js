@@ -24,7 +24,6 @@ const Home = () => {
 
   return (
     <Container>
-      Home
       <ImgSlider />
       <Viewers />
       <Movies />
